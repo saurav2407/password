@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jnct page</title>
+    <style>
+            *{
+            margin: 0%;
+            padding: 0%;
+            }
+            @keyframes slideInleft{
+              from{
+                transform:translateX(-300px);
+              }
+              to{
+                transform:translateY(0);
+              }
+            }
+            @keyframes bulletinslide{
+                  0%{
+                        transform:translateX(0%);
+                      }
+
+                  100%{
+                    transform:translateX(-120%);
+                  }
+
+            }
+              @keyframes slideinright{
+                  0%{
+                      transform:translateX(100%);
+                    }
+
+                  30%{
+                    transform:translateX(70%);
+                  }
+              
+            
+                }
+            @keyframes nevershow{
+              0%{
+                    transform:translateX(100%);
+                  }
+                }
+
+
+
+            .top{
+                width: 100%;
+                height: 20px;
+                color:aliceblue;
+                background-color: rgb(4, 171, 255);
+                line-height: 20px;
+            }
+            .top h4{
+              margin-left:2%;
+              
+            }
+
+            .email{
+              text-align: center;
+              
+            }
+
+            .logo img{
+              margin-top:10px ;
+
+            }
+            .logo h2{
+              color: rgb(0, 0, 0);
+            }
+            
+            #text {
+              width: 100%;
+              height: auto;
+              font-size: 40px;
+              margin-left: 1%;
+              padding: -10px;
+              transition: color 1s ease;
+              text-align: center;
+          }
+          .nav{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: rgb(0, 0, 0);
+            font-weight: bold;
+
+          }
+          .nav:hover{
+              color: black;
+              border: 10px;
+              border-radius: 30px;
+              border-color: #ff0000;
+              font-weight: bold;
+
+          }
+          .nav a{
+              width: 150px;
+              height: 50px;
+              text-decoration: none;
+              color: rgb(255, 255, 255);
+              float: left;
+              line-height: 50px;
+              display: block;
+
+
+          }
+
+          .nav a:hover{
+              height: 50px;
+              color: rgb(0, 0, 0);
+              background-color: #b80808;
+          }
+
+          .mainbody{
+            width: 100%;
+            height: 1000px;
+            background-image: rgb(255, 255, 255);
+          }
+
+
+          .slide {
+              padding: 10px;
+              color: rgb(0, 0, 0);
+              background-color: #ffffff;
+              transition: all 5s;
+          }
+          .slide:hover{
+            font-weight: bold;
+            color:#000000;
+            
+
+          }
+          
+          
+          .slider {
+              display:flex;
+              overflow: hidden;
+              width: 100%;
+              position: relative;
+          }
+          .slider-container{
+            width: 100%;
+            height: 400px;
+          }
+          .slidetext1 {
+            width: 230px;
+            height: 40px;
+            text-align: center;
+            transition: transform 0.5s ease;
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 0, 0);
+            transition: all 1s;
+          }
+
+          .slidetext1:hover {
+            width: 400px;
+            font-size: large;
+            text-align: center;
+            height: 500px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: #ff0000;
+          }
+          .slidetext2 {
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            background-color: #ff0000;
+            transition: all 1s;
+            float: right;
+          }
+          .slidetext2:hover {
+            width: 400px;
+            font-size: large;
+            text-align: center;
+            height: 500px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: #ff0000;
+          }
+          
+          .slide img{
+              width: 100%;
+              height: auto;
+              animation:slideInleft;
+              
+          }
+          
+          button {
+              background-color: #333;
+              margin-left: 30%;
+              color: #fff;
+              border: none;
+              padding: 10px 10px;
+              cursor: pointer;
+          }
+          button:hover {
+              background-color: #555;
+          }
+
+          .boxes{
+            width: 100%;
+            height: auto;
+          }
+          .youtube{
+            width: 33.3333333%;
+          }
+
+          .applybut{
+            width: 150px;
+            height: 50px;
+            color: #000000;
+            background-color: rgb(255, 170, 0);
+            text-decoration: none;
+            float: right;
+            border-top-right-radius: 500px;
+            border-bottom-left-radius: 500px;
+            animation:slideInleft 2s;
+
+          }
+          .applybut:hover{
+            width: 160px;
+            height: 60px;
+            text-decoration: none;
+            color: #ddd;
+            background-color: rgb(255, 0, 0);
+            float: right;
+            border-top-right-radius: 500px;
+            border-bottom-left-radius: 500px;
+
+          }
+          .bullet{
+            width: 100%;
+            height: 3%;
+            background-color: hwb(0 0% 0%);
+
+          }
+
+          .bulletetext{
+            width:100%;
+            margin-left: 30%;
+            font-weight: bold;
+            text-align: left;
+            height: 30px;
+            line-height: 30px;
+            color: #ddd;
+            animation:bulletinslide 14s infinite;
+          }
+          .bulletetext{
+            width:100%;
+            margin-left: 30%;
+            font-weight: bold;
+            text-align: left;
+            height: 30px;
+            line-height: 30px;
+            color: #ddd;
+            animation:bulletinslide 24s infinite;
+          }
+
+          .location{
+            margin-top:80px ;
+            margin-right: 5px;
+            float: right;
+            
+          }
+          .feescource{
+            width: 10px;
+            height: 10px;
+            margin-left:15%;
+            margin-top:200px;
+          }
+        
+          th, td {
+              border: 1px solid #ddd;
+              padding: 8px;
+              text-align: center;
+          }
+
+          th {
+              background-color: #f2f2f2;
+          }
+          .year{
+            font-weight: bold;
+            animation:slideInleft 1s  infinite;
+
+          }
+
+          .footer{
+            width: 100%;
+            height: 300px;
+            color: aliceblue;
+            background:rgb(46, 43, 43);
+          }
+          .feedback{
+            margin-top: 30px;
+          }
+          #name{
+            margin-top: 30px;
+            margin-left: 20px;
+            text-align: center;
+            float: left;
+            color: black;
+            font-weight: bold;
+            background-color: white(0, 0, 0);
+          }
+          #name:hover{
+            margin-top: 30px;
+            margin-left: 20px;
+            text-align: center;
+            float: left;
+            color: white;
+            font-weight: bold;
+            background-color:rgb(255, 166, 0);
+          }
+          #contact{
+            margin-top: 30px;
+            margin-left: 20px;
+            text-align: center;
+            float: left;
+            font-weight: bold;
+            color: black;
+            background-color: white;
+          }
+          #contact:hover{
+            margin-top: 30px;
+            margin-left: 20px;
+            text-align: center;
+            float: left;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+          }
+          #email{
+            margin-top: 30px;
+            margin-left: 20px;
+            text-align: center;
+            float: left;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            background-color: rgb(255, 255, 255);
+          }
+          #email:hover{
+            margin-top: 30px;
+            margin-left: 20px;
+            text-align: center;
+            font-weight: bold;
+            float: left;
+            color: white;
+            background-color: green;
+          }
+          #submit{
+            height: 30px;
+            width: 60px;
+            margin-top: 30px;
+            font-weight: bold;
+            margin-left: 20px;
+            text-align: center;
+            text-decoration: dashed;
+            float: left;
+            color: black;
+            background-color: white;
+          }
+          #submit:hover{
+            height: 30px;
+            width: 60px;
+            margin-top: 30px;
+            text-decoration: none;
+            margin-left: 20px;
+            text-align: center;
+            float: left;
+            color: rgb(255, 255, 255);
+            background-color: rgb(150, 53, 215);
+          }
+    </style>
+  </head>
+
+  <body>
+    {% csrf_token %}
+    {% load static %}
+    <header>
+
+      <div class="top">
+        <h4 class="email"> myjnctrewa@gmail.com <a>9111100493, 9826370054</a></h4>
+      </div>
+      <div class="main">
+        <div class="logo">
+          {% csrf_token %}
+          {% load static %}
+          <img src="{% static 'E:\DJANGO_PYTHON\JNCT\static\logo1.png' %}" alt="JNCT" class="7"><div class="collegename">
+        </div>
+      </div>
+    </header>
+      <center>
+      <div class="nav">
+        <a href="/">Home</a>
+        <a href="/student_login">Login</a>
+        <a href="/fee_cource">Cource & Fees</a>
+        <a href="/Apply_now">Admission</a>
+        <a href="/pictures">Gallery</a>
+        <a href="/notes">Notes</a>
+        <a href="/">Scholarship</a>
+        <a href="/">Placement</a>
+      </div></center>
+        <div class='mainbody'>
+          <div class="slider">
+            <div class="slide">
+              <img src="{% static 'E:\DJANGO_PYTHON\JNCT\static\8.jpg' %}" alt="img1" class="7" width="50" height="50">
+            </div>
+            <div class="slide">
+                <img src="{% static 'E:\DJANGO_PYTHON\JNCT\static\logo2.png' %}" alt="img2" class="7" width="50" height="50">
+            </div>
+            <div class="slide">
+                <img src="{% static 'E:\DJANGO_PYTHON\JNCT\static\1.jpg' %}" alt="img3" class="7" width="50" height="50">
+            </div>
+
+           </div>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+          {% load static %}
+          <script type="text/javascript" src="{% static 'js/script.js'%}"></script>
+          <div class="slider-container">
+            <div class="slidetext1"><h1>INFORMATION</h1><h2>The JNCT was established in 2007 with “JAWAHARLAL NEHRU COLLEGE OF TECHNOLOGY (JNCT), REWA” <br>becoming the second private professional college of the district. JNCT has been the epitome of quality education, <br>strict discipline excellent placements and leader in innovation in field of technical education.</h2></div>
+            <div class="slidetext3"></div>
+            <div class="slidetext2"><h1>NOTICE</h1>ADMISSION IS OPEN FOR SESSION 2022 <br>
+              COURSES :
+              <br>
+              B. TECH.
+              <br>
+              1. CIVIL ENGINEERING<br>
+              
+              2.COMPUTER SCIENCE & ENGINEERING<br>
+              
+              3. ELECTRONICS & COMMUNICATION ENGINEERING<br>
+              
+              4.ELECTRICAL & ELECTRONICS ENGINEERING<br>
+              
+              5. MECHANICAL ENGINEERING<br>
+              
+              6. MINING ENGINEERING<br>
+              
+              <br><br>
+              
+              DIPLOMA<br>
+              
+              1. CIVIL ENGINEERING<br>
+              
+              2. MECHANICAL ENGINEERING<br>
+              
+              3. ELECTRICAL ENGINEERING<br>
+            </div>
+          </div>
+        </div>
+        <div class="boxes">
+          <div><button class="applybut"><a href="/Apply_now"><h2>Apply Now</h2></a></button></div>
+          <div class="detail"></div>
+          <div class="youtube">
+          <iframe width="300" height="150" src="https://www.youtube.com/embed/4Xw7h0MznuE?si=7anYEv3wkojJam0f" title="Jnct Rews" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="bullet" >
+          <div class="arrow_bullet"></div>
+          <div class="bulletetext">
+              Todays big news display show in bulletin board. The jawaharlal nehru college of technology recuting the students more than 90% . The College has made histoy. 
+          </div>
+        </div>
+        </div>
+            
+
+          <div class="photos"></div>
+  </body>
+
+
+<footer class="footer">
+  <div class="feedback">
+    <div><textarea placeholder="Name" id="name" cols="30" rows="2"></textarea></div>
+    <div><textarea placeholder="Contact" id="contact" cols="30" rows="2"></textarea></div>
+    <div><textarea placeholder="E-Mail" id="email" cols="30" rows="2"></textarea></div>
+    <div><button id="submit"><a href="/submit">Submit</a></button></div>
+  </div>
+
+  <div class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3629.122733600267!2d81.34949737500307!3d24.550420478133045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398450b040c8ddfd%3A0x2b303977390c4fae!2sJawaharlal%20Nehru%20College%20Of%20Technology%20Rewa!5e0!3m2!1sen!2sin!4v1696697958021!5m2!1sen!2sin" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</footer>
+</html>

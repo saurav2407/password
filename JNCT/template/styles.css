@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+body{
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: #151820;
+	overflow: hidden;
+}
+
+.text-container h1{
+	color: #fff;
+	font-size: 100px;
+	font-weight: 300;
+	text-align: center;
+	line-height: 60px;
+}
+
+.text-container h1 span{
+	font-size: 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.text-container .animated-text{
+	position: relative;
+	background: #4285F4;
+	margin-top: 15px;
+	width: 370px;
+	height: 45px;
+	box-shadow: 0 0 10px #4285F4,
+	            0 0 120px #4285F4;
+	overflow: hidden;
+}
+
+.text-container .animated-text:before{
+	content: '';
+	background: rgba(255, 255, 255, 0.1);
+	position: absolute;
+	width: 55%;
+	height: 100%;
+	transform: skew(25deg) translateX(-20px);
+}
+
+.text-container .animated-text h2{
+	color: #fff;
+	font-size: 45px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 75px;
+}
+
+.text-container .animated-text h2:nth-child(1){
+	animation: text-move 22s infinite;
+}
+
+@keyframes text-move{
+	0%{
+		margin-top: 0;
+	}
+	10%{
+		margin-top: -75px;
+	}
+	20%{
+		margin-top: -150px;
+	}
+	30%{
+		margin-top: -225px;
+	}
+	40%{
+		margin-top: -300px;
+	}
+	50%{
+		margin-top: -375px;
+	}
+	60%{
+		margin-top: -300px;
+	}
+	70%{
+		margin-top: -225px;
+	}
+	80%{
+		margin-top: -150px;
+	}
+	90%{
+		margin-top: -75px;
+	}
+	100%{
+		margin-top: 0;
+	}
+}
+
+.text-container{
+	-webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.05));
+}
+
+/* circle burst animation */
+
+.animation-container{
+	z-index: 999;
+	position: absolute;
+	width: 750px;
+	height: 550px;
+}
+
+.burst{
+	position: absolute;
+}
+
+.burst .line{
+	position: absolute;
+	background: #fff;
+	width: 10px;
+	height: 10px;
+}
+
+.burst .line:nth-child(1){
+	background: #ea4335;
+	animation: move01 3s linear infinite;
+}
+
+@keyframes move01{
+	0%{
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	50%{
+		transform: translate(0, -90px);
+		opacity: 1;
+	}
+	100%{
+		transform: translate(0, -140px);
+		opacity: 0;
+	}
+}
+
+.burst .line:nth-child(2){
+	background: #34a853;
+	animation: move02 3s linear infinite;
+}
+
+@keyframes move02{
+	0%{
+		transform: rotate(45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50%{
+		transform: rotate(45deg) translate(0, -90px);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(45deg) translate(0, -140px);
+		opacity: 0;
+	}
+}
+
+.burst .line:nth-child(3){
+	background: #4285f4;
+	animation: move03 3s linear infinite;
+}
+
+@keyframes move03{
+	0%{
+		transform: rotate(90deg) translate(0, 0);
+		opacity: 0;
+	}
+	50%{
+		transform: rotate(90deg) translate(0, -90px);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(90deg) translate(0, -140px);
+		opacity: 0;
+	}
+}
+
+.burst .line:nth-child(4){
+	background: #fbbc05;
+	animation: move04 3s linear infinite;
+}
+
+@keyframes move04{
+	0%{
+		transform: rotate(135deg) translate(0, 0);
+		opacity: 0;
+	}
+	50%{
+		transform: rotate(135deg) translate(0, -90px);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(135deg) translate(0, -140px);
+		opacity: 0;
+	}
+}
+
+.burst .line:nth-child(5){
+	background: #DC18B9;
+	animation: move05 3s linear infinite;
+}
+
+@keyframes move05{
+	0%{
+		transform: rotate(180deg) translate(0, 0);
+		opacity: 0;
+	}
+	50%{
+		transform: rotate(180deg) translate(0, -90px);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(180deg) translate(0, -140px);
+		opacity: 0;
+	}
+}
+
+.burst .line:nth-child(6){
+	background: #FF5A00;
+	animation: move06 3s linear infinite;
+}
+
+@keyframes move06{
+	0%{
+		transform: rotate(225deg) translate(0, 0);
+		opacity: 0;
+	}
+	50%{
+		transform: rotate(225deg) translate(0, -90px);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(225deg) translate(0, -140px);
+		opacity: 0;
+	}
+}
+
+.burst .line:nth-child(7){
+	background: #8621F8;
+	animation: move07 3s linear infinite;
+}
+
+@keyframes move07{
+	0%{
+		transform: rotate(270deg) translate(0, 0);
+		opacity: 0;
+	}
+	50%{
+		transform: rotate(270deg) translate(0, -90px);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(270deg) translate(0, -140px);
+		opacity: 0;
+	}
+}
+
+.burst .line:nth-child(8){
+	background: #FFFF1B;
+	animation: move08 3s linear infinite;
+}
+
+@keyframes move08{
+	0%{
+		transform: rotate(315deg) translate(0, 0);
+		opacity: 0;
+	}
+	50%{
+		transform: rotate(315deg) translate(0, -90px);
+		opacity: 1;
+	}
+	100%{
+		transform: rotate(315deg) translate(0, -140px);
+		opacity: 0;
+	}
+}
+   .s .btn-primary  a {
+    text-decoration: none;
+	color: white;
+   }
+   .s .btn-danger  a {
+    text-decoration: none;
+	color: white;
+   }
+   .s .btn-success  a {
+    text-decoration: none;
+	color: white;
+   }
+   .s .btn-warning  a {
+    text-decoration: none;
+	color: white;
+   }
+.s{
+margin-top: 450px;
+
+}
+   .btn{
+	color: #fff;
+	border: none;
+	margin: 20px;
+	padding: 20px 30px;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: 0.5s;
+	transition-property: box-shadow;
+  }
+
+  .btn-primary{
+	background: #50A7FF;
+	box-shadow: 0 0 25px #50A7FF;
+  }
+
+  .btn-primary:hover{
+	box-shadow: 0 0 5px #50A7FF,
+				0 0 25px #50A7FF,
+				0 0 50px #50A7FF,
+				0 0 100px #50A7FF;
+  }
+
+  .btn-success{
+	background: #03D29F;
+	box-shadow: 0 0 25px #03D29F;
+  }
+
+  .btn-success:hover{
+	box-shadow: 0 0 5px #03D29F,
+				0 0 25px #03D29F,
+				0 0 50px #03D29F,
+				0 0 100px #03D29F;
+  }
+
+  .btn-danger{
+	background: #FF7675;
+	box-shadow: 0 0 25px #FF7675;
+  }
+
+  .btn-danger:hover{
+	box-shadow: 0 0 5px #FF7675,
+				0 0 25px #FF7675,
+				0 0 50px #FF7675,
+				0 0 100px #FF7675;
+  }
+
+  .btn-warning{
+	background: #F0DF51;
+	box-shadow: 0 0 25px #F0DF51;
+	margin-left: 250px;
+  }
+
+  .btn-warning:hover{
+	box-shadow: 0 0 5px #F0DF51,
+				0 0 25px #F0DF51,
+				0 0 50px #F0DF51,
+				0 0 100px #F0DF51;
+  }
+
+  /* Your CSS styles here */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

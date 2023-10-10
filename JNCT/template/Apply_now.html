@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNCT Welcome page</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        @keyframes slideInleft{
+            from{
+                transform:translateX(-300px);
+            }
+            to{
+                transform:translateY(0);
+            }
+        }
+
+        @keyframes slideinright{
+            0%{
+                    transform:translateX(100%);
+                }
+
+            30%{
+                transform:translateX(70%);
+            }
+            10%{
+                transform:translateX(70%);
+            }
+            20%{
+                transform:translateX(70%);
+            }
+            50%{
+                transform:translateX(60%);
+            }
+            50%{
+                transform:translateY(20%);
+            }
+
+            100%{
+                transform:translateY(0%);
+            }
+            70%{
+                transform:translateY(-60%);
+            }     
+        }
+        @keyframes nevershow{
+            0%{
+                    transform:translateX(100%);
+                }
+        }
+
+        .top{
+            width: 100%;
+            height: 20px;
+            color:aliceblue;
+            background-color: rgb(4, 171, 255);
+            line-height: 20px;
+        }
+
+        .email{
+             text-align: center;
+        }
+        .logo{
+            width:100%;
+            height:180px;
+        }
+
+        .logo img{
+            margin-top:2px ;
+            margin-left: 1px;
+            float:left;
+
+        }
+        .logo h2{
+             color: rgb(0, 0, 0);
+        }
+        .collegename{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;  
+        }
+        .collegename h2{
+            width: 900px;
+            height: 50px;
+            font-weight: bold;
+            color: rgb(255, 0, 0);
+            margin-bottom: 40px;
+            line-height: 50px;
+            margin-left: 5%;
+            animation:slideinright 5s  ;
+            margin-bottom: 40px;
+        }
+
+        #text {
+            width: 100%;
+            font-size: 24px;
+            margin-left: 5%;
+            padding: 10px;
+            transition: color 1s ease;
+            text-align: center;
+        }
+
+        .collegename h2:hover{
+            font-weight: bold;
+            animation:nevershow 30s infinite  ;
+
+            }
+
+        .nav{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: rgb(0, 0, 0);
+            font-weight: bold;
+
+        }
+        .nav:hover{
+            color: black;
+            background: rgb(0, 0, 0);
+            font-weight: bold;
+
+        }
+        .nav a{
+            width: 150px;
+            height: 50px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            float: left;
+            line-height: 50px;
+            display: block;
+            
+
+        }
+
+        .nav a:hover{
+            height: 50px;
+            color: rgb(0, 0, 0);
+            background-color: #b80808;
+        }
+
+        body {
+            width: 100%;
+            height: auto;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        .form-container {
+            width: 100%;
+            background-color : white;
+            border: 0px solid orange;
+            box-shadow: 13px 10px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 20 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #8e6767;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: red;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        h4{
+            color:red;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .a{
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        #name{
+            border-color: black;
+        }
+        #name:hover{
+            border-color: rgb(255, 0, 0);
+        }
+        #email{
+            border-color: black;
+        }
+        #phone{
+            border-color: black;
+        }
+        #address{
+            border-color: black;
+        }
+        #course{
+            border-color: black;
+        }
+        #course:hover{
+            font-weight: bold;
+            color: black;
+            background-color: rgb(255, 128, 0);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div class="top">
+          <h5 class="email"> myjnctrewa@gmail.com <a>9111100493, 9826370054</a></h5>
+        </div>
+        <div class="main">
+          <div class="logo">
+              {% csrf_token %}
+              {% load static %}
+            <img src="{% static 'E:\DJANGO_PYTHON\JNCT\static\logo1.png' %}" alt="collegeLogo" height="120" width="30%">
+            <div class="collegename">
+              <h2>
+                <div id="text">
+                  &hearts; JawaharLal Nehru College of Technology Welcomes You &hearts;
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
+    </header>
+    <center>
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/student_login">Login</a>
+        <a href="/fee_cource">Cource & Fees</a>
+        <a href="/Apply_now">Admission</a>
+        <a href="/pictures">Gallery</a>
+        <a href="/notes">Notes</a>
+        <a href="#">Scholarship</a>
+        <a href="#">Placement</a>
+    </div></center>
+
+    <div class="form-container">
+        <h2>College Sign-up Form</h2>
+        <form action="/coaching" method="POST">
+            <div class="name">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required autofocus>
+            </div>
+
+            <div class="email">
+                {% csrf_token %}
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="phone">
+                {% csrf_token %}
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="address">
+                {% csrf_token %}
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" >
+            </div>
+            <div class="form-group">
+                {% csrf_token %}
+                <label for="course">Select Coaching Course:</label>
+                <select id="course" name="course">
+                    <option>B.tech</option>
+                    <option value="Computer science Engineering">Computer science Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                </select>
+            </div>
+            <div class="form-group" >
+                <input type="submit" value="Sign Up ">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>contact Us</title>
+        <style>
+
+            *{
+            margin: 0%;
+            padding: 0%;
+            }
+            @keyframes slideInleft{
+                from{
+                transform:translateX(-300px);
+                }
+                to{
+                transform:translateY(0);
+                }
+            }
+
+            @keyframes slideinright{
+
+                50%{
+                  transform:translateX(-200%);
+                }     
+                40%{
+                  transform:translateX(-80%);
+                }  
+              }
+            @keyframes nevershow{
+            0%{
+                  transform:translateX(100%);
+                }
+            }
+
+
+
+            .top{
+              width: 100%;
+              height: 20px;
+              color:aliceblue;
+              background-color: rgb(4, 171, 255);
+              line-height: 20px;
+            }
+            .top h4{
+                margin-left:2%;
+            }
+
+            .email{
+                text-align: center;
+            }
+
+            .logo img{
+                margin-top:10px ;
+
+            }
+            .logo h2{
+                color: rgb(0, 0, 0);
+            }
+            .collegename{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;  
+            }
+            .collegename h2{
+                width: 900px;
+                height: 100px;
+                font-weight: bold;
+                color: rgb(255, 0, 0);
+                margin-bottom: 40px;
+                line-height: 50px;
+                margin-left: 5%;
+                animation:slideinright 5s  ;
+            }
+
+            #text {
+                width: 100%;
+                font-size: 24px;
+                margin-left: 5%;
+                padding: 10px;
+                transition: color 1s ease;
+                text-align: center;
+            }
+
+            .collegename h2:hover{
+                font-weight: bold;
+                animation:nevershow 30s infinite  ;
+
+            }
+
+            .nav{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: rgb(0, 0, 0);
+            font-weight: bold;
+
+            }
+            .nav:hover{
+                color: black;
+                background: rgb(0, 0, 0);
+                font-weight: bold;
+
+            }
+            .nav a{
+                width: 150px;
+                height: 50px;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                float: left;
+                line-height: 50px;
+                display: block;
+
+
+            }
+
+            .nav a:hover{
+                height: 50px;
+                color: rgb(0, 0, 0);
+                background-color: #b80808;
+            }
+
+            .body{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: white;
+                overflow: hidden;           
+            }
+
+
+            .issuehead{
+                float: left;
+                margin: 1%;
+                color: #b80808;
+                text-shadow: #b80808;
+
+            }
+
+            .fix{
+                margin-left: 10%;
+                float: left;
+                padding-left: 10%;
+                text-align: center;
+                width: 90px;
+                height: 60px;
+
+            }
+            .report:hover{
+                border: 30px;
+                border-color: green;
+                color: #b80808;
+            }
+            .phone:hover{
+                border: 30px;
+                border-color: green;
+                color: #b80808;
+            }
+            .email:hover{
+                border: 30px;
+                border-color: green;
+                color: #b80808;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            {% csrf_token %}
+            {% load static %}
+
+            <div class="top">
+              <h4 class="email"> myjnctrewa@gmail.com <a>9111100493, 9826370054</a></h4>
+            </div>
+            <div class="main">
+              <div class="logo">
+                <img src="{%static 'E:\DJANGO_PYTHON\JNCT\img\logo1.png'%}" alt="collegeLogo" height="130" width="60%">
+                <div class="collegename">
+                  <h2>
+                    <div id="text">
+                      &hearts; JawaharLal Nehru College of Technology Welcomes You &hearts;
+                    </div>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </header>
+            <center>
+            <div class="nav">
+              <a href="/">Home</a>
+              <a href="/student_login">Login</a>
+              <a href="/fee_cource">Cource & Fees</a>
+              <a href="/Apply_now">Admission</a>
+              <a href="/pictures">Gallery</a>
+              <a href="/notes">Notes</a>
+              <a href="/">Scholarship</a>
+              <a href="/">Placement</a>
+            </div></center>
+        <div class="form-container">
+        <h2 class="issuehead">Contact/Issue</h2>
+        <form action="/report" method="get">
+            <div class="fix">
+                <div class="report">
+                    <h2>Issue :</h2>
+                    <input type="text" id="issue" name="issue" required autofocus>
+                </div>
+                <div class="phone">
+                    <h2>Phone :</h2>
+                    <input type="text" id="phone" name="phone" required >
+                </div>
+                <div class="email">
+                    <h2>Email :</h2>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Report" >
+                </div>
+            </div>
+
+        </form>
+        </div>
+    </body>
+</html>

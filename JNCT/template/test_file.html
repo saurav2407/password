@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .slider {
+        display: flex;
+        overflow: hidden;
+        width: 80%;
+        margin: 20px auto;
+        position: relative;
+    }
+    
+    .slide {
+        flex: 1;
+        transition: transform 0.5s ease;
+    }
+    
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+    
+    button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <script src="script.js"></script>
+</body>
+</html>

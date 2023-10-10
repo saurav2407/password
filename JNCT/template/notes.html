@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>subject notes</title>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    *{
+            margin: 0%;
+            padding: 0%;
+        }
+        @keyframes slideInleft{
+            from{
+                transform:translateX(-300px);
+            }
+            to{
+                transform:translateY(0);
+            }
+        }
+
+        @keyframes slideinright{
+            0%{
+                    transform:translateX(100%);
+                }
+
+            30%{
+                transform:translateX(70%);
+            }
+            10%{
+                transform:translateX(70%);
+            }
+            20%{
+                transform:translateX(70%);
+            }
+            50%{
+                transform:translateX(60%);
+            }
+            50%{
+                transform:translateY(20%);
+            }
+
+            100%{
+                transform:translateY(0%);
+            }
+            70%{
+                transform:translateY(-60%);
+            }
+        }
+        @keyframes nevershow{
+            0%{
+                    transform:translateX(100%);
+                }
+        }
+
+        .top{
+            width: 100%;
+            height: 20px;
+            color:aliceblue;
+            background-color: rgb(4, 171, 255);
+            line-height: 20px;
+        }
+
+        .email{
+             text-align: center;
+        }
+        .logo{
+            width:100%;
+            height:180px;
+        }
+
+        .logo img{
+            margin-top:2px ;
+            margin-left: 1px;
+            float:left;
+
+        }
+        .logo h2{
+             color: rgb(0, 0, 0);
+        }
+        .collegename{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+        }
+        .collegename h2{
+            width: 900px;
+            height: 50px;
+            font-weight: bold;
+            color: rgb(255, 0, 0);
+            margin-bottom: -10px;
+            line-height: 50px;
+            animation:slideinright 5s  ;
+            margin-bottom: 40px;
+        }
+
+        #text {
+            width: 100%;
+            font-size: 30px;
+            margin-left:440px;
+            margin-top:40px;
+            transition: color 1s ease;
+
+        }
+
+        .collegename h2:hover{
+            font-weight: bold;
+            animation:nevershow 30s infinite  ;
+
+            }
+
+        .nav{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: rgb(0, 0, 0);
+            font-weight: bold;
+
+        }
+        .nav:hover{
+            color: black;
+            background: rgb(0, 0, 0);
+            font-weight: bold;
+
+        }
+        .nav a{
+            width: 150px;
+            height: 50px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            float: left;
+            line-height: 50px;
+            display: block;
+
+
+        }
+
+        .nav a:hover{
+            height: 50px;
+            color: rgb(0, 0, 0);
+            background-color: #b80808;
+        }
+
+
+        body {
+          font-family: Arial, sans-serif;
+        }
+        .search{
+          margin-top: 15px;
+          width: 55px;
+          height: 20px;
+
+        }
+        .input{
+          margin-top: 15px;
+          color:black;
+          background-color: #3498db;
+        }
+
+        #navbar {
+          height: 60px;
+          background-color: #0f1111;
+        }
+        #logo {
+          color: #f08804;
+          font-size: 25px;
+        }
+        button {
+          background-color: #f08804;
+        }
+        #navbar a {
+          margin-right: 200px;
+          text-decoration: none;
+        }
+        Footer {
+          color: black;
+          text-align: center;
+          background-color: cadetblue;
+          height: 300px;
+        }
+        h3 {
+          color: black;
+        }
+
+        input {
+          color: black;
+        }
+
+        pre {
+          border: solid;
+          border-color: black;
+          font-size: large;
+        }
+
+        main {
+          height: 700px;
+          width: auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 25px;
+          padding: 15px;
+          border: 1px solid hsl(0, 6%, 3%);
+          border-radius: 5px;
+          background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm347-baifernn-07_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=f26683f9973614192e38583a0400a312);
+        }
+
+        .note {
+          background-color: hwb(66 47% 21%);
+
+          border: 1px solid hsl(0, 6%, 3%);
+          border-radius: 5px;
+          /* width: calc(25.33% - 1px);  */
+          width: 910px;
+          height: 20px;
+          text-align: center;
+        }
+        .notes {
+
+          background-color: #f08804;
+          padding: 29px;
+          width: calc(70.33% - 0px); /* Adjust the width as needed */
+          height: 10px;
+          border: 1px solid hsl(0, 6%, 3%);
+          border-radius: 5px;
+          flex-direction: column;
+          animation:slideInleft 6s;
+
+
+
+        }
+        .notes a{
+          margin-right: 100px;
+          text-decoration: none;
+        }
+        h2 {
+          color: #151818;
+          position: absolute;
+          right: 45%;
+          top: 70px;
+        }
+        H4 {
+          color: #0f1111;
+        }
+        .download-button {
+          padding: 10px 20px;
+          background-color: #3498db;
+          color: #ffffff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        .download-button:hover {
+          background-color: #2980b9;
+        }
+        .youtube{
+          margin-top: 260px;
+          border-radius: 290px;
+
+        }
+        .youtube:hover{
+          width: 120;
+          height: 120px;
+          color: black;
+          border-top: #87db34;
+          border-radius: 120px;
+          background-color:#fff459 ;
+          transition: background-color 3s ease;
+        }
+  </style>
+  <body>
+        <header>
+
+        <div class="top">
+          <h5 class="email"> myjnctrewa@gmail.com <a>9111100493, 9826370054</a></h5>
+        </div>
+        <div class="main">
+          <div class="logo">
+              {% csrf_token %}
+              {% load static %}
+            <img src="{% static 'E:\DJANGO_PYTHON\JNCT\static\logo1.png' %}" alt="collegeLogo" height="120" width="30%">
+            <div class="collegename">
+              <h2>
+                <div id="text">
+                  &hearts; JawaharLal Nehru College of Technology Welcomes You &hearts;
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
+    </header>
+    <center>
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/student_login">Login</a>
+        <a href="/fee_cource">Cource & Fees</a>
+        <a href="/Apply_now">Admission</a>
+        <a href="/pictures">Gallery</a>
+        <a href="/notes">Notes</a>
+        <a href="#">Scholarship</a>
+        <a href="#">Placement</a>
+    </div></center>
+    <header>
+      <h1>B.Tech Notes</h1>
+    </header>
+
+
+    <main>
+      <div class="note">
+        <h3>Select subject</h3>
+        <br />
+        <div class="notes">
+            <a href="#"
+              >Mathematics-I </a>
+               <a href="{% static 'E:\DJANGO_PYTHON\JNCT\static\notes\maths1.pdf'%}" download="Mathmatic-I">
+                <button class="download-button">Download File</button>
+              </a>
+
+
+        </div>
+        <br />
+        <div class="notes">
+
+            <a href="#"
+              >Mathematics-II </a>
+              <a href="path_to_your_file.zip" download>
+                <button class="download-button">Download File</button>-
+              </a>
+
+        </div>
+        <br />
+        <div class="notes">
+
+            <a href="#"
+              >Physics-I </a>
+              <a href="{% static 'E:\DJANGO_PYTHON\JNCT\static\notes\Engineering Physics Notes.zip'%}" download>
+                <button class="download-button">Download File</button>
+              </a >
+
+        </div>
+        <br />
+        <div class="notes">
+
+          <a href="#"
+            >Physics-II </a>
+            <a href="path_to_your_file.zip" download>
+              <button class="download-button">Download File</button>
+            </a>
+        </div>
+        <br />
+        <div class="notes">
+          <a href="#"
+            >Chemistry-I </a>
+            <a href="path_to_your_file.zip" download>
+              <button class="download-button">Download File</button>
+            </a>
+        </div>
+        <br />
+        <div class="notes">
+          <a href="E:\DJANGO_PYTHON\JNCT\static\notes\DSA handwritten notes.zip">DSA</a>
+          {% load static %}
+            <a href="{% static 'E:\DJANGO_PYTHON\JNCT\static\notes\DSA handwritten notes.zip'%}" download>
+              <button class="download-button">Download File</button>
+            </a>
+
+        </div>
+      </div>
+      <div class="youtube">
+        <a href="https://www.youtube.com/watch?v=qhVMp7oF99Q"><img src="https://i.pinimg.com/originals/52/9e/a7/529ea730ed583c217a43f620a734041a.png" height="120px" width="150"></a>
+      </div>
+    </main>
+
+
+    <footer>
+      JawaharLal Nehru College of Technology&hearts;<br />
+
+      <h4>@anubhav.com</h4>
+      <br />
+      <br />
+      <section id="contact">
+        <p>If you have any questions or inquiries, so contect us</p>
+        <br />
+        <ul>
+          <li>
+            &#9993;
+            <a href="mailto:contact@example.com">contact@example.com</a>
+          </li>
+          <br />
+          <li>&#9743;<a href="tel:+917067063333">+917067xxxxx</a></li>
+          <br />
+          <li>Address: Ratahra Bypass Rewa</li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>
+
+

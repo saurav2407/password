@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{
+            margin: 0%;
+            padding: 0%;
+            }
+            @keyframes slideInleft{
+              from{
+                transform:translateX(-300px);
+              }
+              to{
+                transform:translateY(0);
+              }
+            }
+            @keyframes bulletinslide{
+                  0%{
+                        transform:translateX(0%);
+                      }
+
+                  100%{
+                    transform:translateX(-120%);
+                  }
+
+            }
+              @keyframes slideinright{
+                  0%{
+                      transform:translateX(100%);
+                    }
+
+                  30%{
+                    transform:translateX(70%);
+                  }
+              
+            
+                }
+            @keyframes nevershow{
+              0%{
+                    transform:translateX(100%);
+                  }
+                }
+
+
+
+            .top{
+                width: 100%;
+                height: 20px;
+                color:aliceblue;
+                background-color: rgb(4, 171, 255);
+                line-height: 20px;
+            }
+            .top h4{
+              margin-left:2%;
+              
+            }
+
+            .email{
+              text-align: center;
+              
+            }
+
+            .logo img{
+              margin-top:10px ;
+
+            }
+            .logo h2{
+              color: rgb(0, 0, 0);
+            }
+            
+            #text {
+              width: 100%;
+              height: auto;
+              font-size: 40px;
+              margin-left: 1%;
+              padding: -10px;
+              transition: color 1s ease;
+              text-align: center;
+          }
+          .nav{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: rgb(0, 0, 0);
+            font-weight: bold;
+
+          }
+          .nav:hover{
+              color: black;
+              border: 10px;
+              border-radius: 30px;
+              border-color: #ff0000;
+              font-weight: bold;
+
+          }
+          .nav a{
+              width: 150px;
+              height: 50px;
+              text-decoration: none;
+              color: rgb(255, 255, 255);
+              float: left;
+              line-height: 50px;
+              display: block;
+
+
+          }
+
+          .nav a:hover{
+              height: 50px;
+              color: rgb(0, 0, 0);
+              background-color: #b80808;
+          }
+
+        </style>
+
+    </head>
+    <header>
+        {% csrf_token %}
+        {% load static %}
+        <img src="{% static 'E:\DJANGO_PYTHON\JNCT\static\logo1.png' %}" alt="collegeLogo" height="120" width="30%">
+
+    </header>
+
+    <body>
+        {% csrf_token %}
+        {% load static %}
+        <header>
+    
+            <div class="top">
+            <h4 class="email"> myjnctrewa@gmail.com <a>9111100493, 9826370054</a></h4>
+            </div>
+        </header>
+            <center>
+            <div class="nav">
+            <a href="/">Home</a>
+            <a href="/student_login">Login</a>
+            <a href="/fee_cource">Cource & Fees</a>
+            <a href="/Apply_now">Admission</a>
+            <a href="/pictures">Gallery</a>
+            <a href="/notes">Notes</a>
+            <a href="/">Scholarship</a>
+            <a href="/">Placement</a>
+            </div></center>
+
+
+            {% csrf_token %}
+            {% load static %}
+            <h1>{{name}}</h1>
+            <h1>{{father}}</h1>
+            <h1>{{Mother}}</h1>
+            <h1>{{phone}}</h1>
+            <h1>{{roll_num}}</h1>
+            <h1>{{email}}</h1>
+            <h1>{{cource}}</h1>
+            <h1>{{Address}}</h1>
+
+    <p>{{param}}</p>
+    </body>
+</html>
